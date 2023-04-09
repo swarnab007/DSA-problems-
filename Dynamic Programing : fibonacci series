@@ -1,0 +1,33 @@
+#include<bits/stdc++.h>
+#include<vector>
+using namespace std;
+
+// int fib(int n, vector<int> &dp) {
+//         // Base case
+//         if(n <= 1)
+//                 return n;
+//         // Step 2; check if dp[n] != -1 return it
+//         if(dp[n] != -1) 
+//                 // Our answer is already stored
+//                 return dp[n];
+//         // Step 3 : Storing the data
+//         dp[n] = fib(n-1, dp) + fib(n-2, dp);
+//         return dp[n];
+// }
+int main()
+{
+        /*
+        *  Write your code here. 
+         *  Read input as specified in the question.
+         *  Print output as specified in the question.
+        */
+        // Top Down Approach
+        int n;
+        cin >> n;
+        // Step 1 : creating dp array
+        vector<int> dp(n+1);
+        for(int i=0; i<=n; i++) {
+                dp[i] = -1;
+        }
+        cout << fib(n, dp) << endl;
+}
